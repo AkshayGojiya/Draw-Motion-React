@@ -13,9 +13,9 @@ const DrawingCanvas: React.FC = () => {
     if (!context) return;
 
     setCtx(context);
-    context.fillStyle = "black";
+    context.fillStyle = "white";
     context.fillRect(0, 0, canvas.width, canvas.height);
-    context.strokeStyle = "white";
+    context.strokeStyle = "black";
     context.lineWidth = 4;
     context.lineCap = "round";
   }, []);
@@ -60,12 +60,12 @@ const DrawingCanvas: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center w-full h-full bg-gray-900">
+    <div className="flex items-center justify-center w-[50%] h-[500px] bg-white rounded-lg shadow-xl border-2 border-purple-500">
       <canvas
         ref={canvasRef}
         width={600}
         height={400}
-        className="border-2 border-white rounded-lg"
+        className="border-2 border-black rounded-lg bg-white"
         onMouseDown={startDrawing}
         onMouseMove={draw}
         onMouseUp={stopDrawing}

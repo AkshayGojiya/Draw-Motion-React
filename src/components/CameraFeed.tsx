@@ -19,8 +19,13 @@ const CameraFeed: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center w-full h-full bg-black">
-      <video ref={videoRef} autoPlay playsInline className="w-full h-full object-cover rounded-lg" />
+    <div className="flex items-center justify-center w-[50%] h-[500px] bg-black rounded-lg shadow-xl border-2 border-purple-500">
+      <video
+        ref={videoRef}
+        autoPlay
+        playsInline
+        className="w-full h-full object-cover rounded-lg transform scale-x-[-1]"
+      />
     </div>
   );
 };

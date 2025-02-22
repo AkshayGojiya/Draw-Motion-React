@@ -65,17 +65,10 @@ function App() {
 
       {/* Show Drawing Area if "Start Drawing" is clicked */}
       {isDrawing ? (
-        <div className="flex h-screen">
-          {/* Camera Feed Section (Left) */}
-          <div className="w-1/2 h-full bg-black flex items-center justify-center">
-            <CameraFeed />
-          </div>
-
-          {/* Canvas Section (Right) */}
-          <div className="w-1/2 h-full bg-gray-900 flex items-center justify-center">
-            <DrawingCanvas />
-          </div>
-        </div>
+        <div className="flex justify-center items-center min-h-[80vh] gap-10 px-6 mx-16">
+        <CameraFeed />
+        <DrawingCanvas />
+      </div>
       ) : (
         <>
           {/* Hero Section */}
